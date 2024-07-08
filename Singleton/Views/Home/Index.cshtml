@@ -3,7 +3,7 @@
 }
 
 <main>
-    
+
 
     <div class="row">
         <section class="col-md-4" aria-labelledby="gettingStartedTitle">
@@ -15,6 +15,50 @@
             <p><a class="btn btn-outline-dark" href="https://www.linkedin.com/in/mujeeb-dev/">LinkedIn</a> <a class="btn btn-outline-dark" href="https://github.com/mujeebdevInd/">Github</a></p>
             <p></p>
         </section>
-       
+
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>What is the Singleton Design Pattern?</h2>
+            <p>
+                It is a creational design pattern that deals with object creation mechanisms.
+                <br />
+                A singleton is a class that only allows a single instance of itself to be created.
+
+            </p>
+
+            <h2>Key Characteristics of the Singleton Design Pattern in C#</h2>
+
+            <h5>Single Instance:</h5>
+            <p>This Design Pattern ensures that only one instance of the Singleton class is created throughout the application.</p>
+            <h5>Global Access:</h5>
+            <p>Provides a global access point to that instance.</p>
+            <h5>Lazy Initialization:</h5>
+            <p>We can lazily initialize the singleton instance, which means it is created when it is needed for the first time, not when the application starts.</p>
+            <h5>Thread Safety:</h5>
+            <p>When used in a multi-threaded application, the singleton needs to be thread-safe to prevent multiple instances from being created.</p>
+            <br />
+            <h2>Implementation Guidelines of Singleton Design Pattern in C#:</h2>
+
+            <p>The following are the guidelines to implement the Singleton Design Pattern in C#.</p>
+            <h5>Private Parameterless Constructor:</h5>
+            <p>We need to create a private and parameterless constructor. This is required because it will restrict the class from being instantiated from outside the class; it will only instantiate from within the class.</p>
+            <h5>Sealed Class:</h5>
+            <p>The Singleton class should be declared sealed to ensure it cannot be inherited. This will be useful when dealing with nested classes. In our next article, we will discuss this scenario with an example.</p>
+            <h5>Static Variable:</h5>
+            <p>We need to create a private static variable that holds the single instance of the class.</p>
+            <h5>Public Static Method or Property:</h5>
+            <p>
+                We also need to create a public static property or method that will return the singleton instance. This method or property first checks whether the singleton class instance has been created. If the singleton instance is created, it returns that instance; otherwise, it will create an instance and then return it. This static method or property provides the global point of access to the singleton instance and ensures that only one instance of the class is created.
+
+            </p>
+            <h2>When to Use Singleton Design Pattern in C# Real-time Applications?</h2>
+            <p>The following are some of the real-time scenarios where using the Singleton Design Pattern can be beneficial:</p>
+            <h5>Shared Resources Management:</h5>
+            <p>For managing shared resources such as database connection pools or configuration data, where only one instance should manage the resource throughout the system.</p>
+            <h5>Logging:</h5><p>In scenarios where an application-wide logger instance needs to capture logs from various parts of an application, ensuring that the logging mechanism is consistently used.</p>
+            <h5>Caching:</h5><p>When you need to cache application data so it’s accessible globally and maintained within a single object, ensuring consistency.</p>
+            <h5>Controlled Access and Operations:</h5><p> When you need to perform operations where exactly one instance is needed to coordinate actions across the system, for example, a logging class or managing access to a value shared across various parts of an application.</p>
+        </div>
     </div>
 </main>
